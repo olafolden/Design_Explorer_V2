@@ -1,5 +1,5 @@
 import { useDesignStore } from '../store/useDesignStore';
-import { ParallelCoordinatesCanvas } from './ParallelCoordinatesCanvas';
+import { ParallelCoordinates } from './ParallelCoordinates';
 import { RadarChart } from './RadarChart';
 import { ThreeDViewer } from './ThreeDViewer';
 import { ThumbnailGrid } from './ThumbnailGrid';
@@ -44,7 +44,7 @@ export function MainExplorer({ onReset }: MainExplorerProps) {
         {/* Top Row: Parallel Coordinates + Radar Chart */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
-            <ParallelCoordinatesCanvas />
+            <ParallelCoordinates />
           </div>
           <div>
             <RadarChart />
