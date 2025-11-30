@@ -5,12 +5,16 @@ import { MainExplorer } from './components/MainExplorer'
 function App() {
   const [isDataLoaded, setIsDataLoaded] = useState(false)
 
+  const handleReset = () => {
+    setIsDataLoaded(false)
+  }
+
   return (
     <>
       {!isDataLoaded ? (
         <LandingPage onLoadComplete={() => setIsDataLoaded(true)} />
       ) : (
-        <MainExplorer />
+        <MainExplorer onReset={handleReset} />
       )}
     </>
   )
